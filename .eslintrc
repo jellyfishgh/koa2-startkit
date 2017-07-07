@@ -2,14 +2,46 @@
   "parser": "babel-eslint",
   "extends": "standard",
   "env": {
-    "node": true,
+    "browser": true,
+    "commonjs": true,
     "es6": true,
+    "node": true,
     "mocha": true
   },
   "ecmaFeatures": {
     "arrowFunctions": true
   },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
   "rules": {
-    "func-style": [2, "declaration", { "allowArrowFunctions": true }]
+    "no-console": "off",
+    "space-before-function-paren": "off",
+    "keyword-spacing": "off",
+    "func-style": [2, "declaration", { "allowArrowFunctions": true }],
+    "indent": [
+      "error",
+      2,
+      {"SwitchCase": 1}
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ]
   }
 }
